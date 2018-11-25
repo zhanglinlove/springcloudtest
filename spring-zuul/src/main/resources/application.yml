@@ -1,0 +1,19 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/,http://localhost:9100/eureka/
+        register-with-eureka: true
+        fetch-registry: true
+server:
+    port: 8089
+spring:
+    application:
+        name: zuul
+zuul:
+    routes:
+        api-a:
+            path: /api-member/**
+            serviceId: member
+        api-b:
+            path: /api-order/**
+            serviceId: order
