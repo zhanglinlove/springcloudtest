@@ -1,0 +1,14 @@
+server:
+    port: 3300
+spring:
+    application:
+        name: redission
+    redis:
+        host: 127.0.0.1
+        port: 6379
+        password:
+        maxIdle: 20
+        maxActive: 300
+        maxWait: 20
+        timeout: 100000
+        data: 1
